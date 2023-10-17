@@ -7,6 +7,8 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
+import WrongPage from "./pages/WrongPage";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import League from "./pages/League";
@@ -20,11 +22,16 @@ function App() {
         <Route path="/league/:id" element={<League />} />
         <Route path="/euroCups/:id" element={<EuroCups />} />
         <Route path="/news" element={<News />} />
+        <Route path="*" element={<WrongPage />} />
       </Route>
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} /> <Analytics />
+    </>
+  );
 }
 
 export default App;
