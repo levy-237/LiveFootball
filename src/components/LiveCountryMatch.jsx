@@ -7,7 +7,9 @@ export default function LiveCountryMatch() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://apiv3.apifootball.com/?action=get_live_odds_commnets&country_id=${country}&APIkey=0490257b57bacc27910d998de4a5000247eb04b5f3a415f81cf53da0259b97d8`
+        `https://apiv3.apifootball.com/?action=get_live_odds_commnets&country_id=${country}&APIkey=${
+          import.meta.env.VITE_APIKEY
+        }`
       );
       if (!response.ok) {
         throw new Error("not ok");

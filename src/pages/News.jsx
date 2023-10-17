@@ -4,7 +4,9 @@ export default function News() {
   const [news, setNews] = useState([]);
   useEffect(() => {
     fetch(
-      " https://api.thenewsapi.com/v1/news/all?api_token=yK0ewZrXS6cSpNJPt7I4cYzAlUhCinzsPnEMAKk4&language=en&limit=3&search=soccer"
+      ` https://api.thenewsapi.com/v1/news/all?api_token=${
+        import.meta.env.VITE_NEWSAPI
+      }&language=en&limit=3&search=soccer`
     )
       .then((res) => res.json())
       .then((data) => setNews(data.data));

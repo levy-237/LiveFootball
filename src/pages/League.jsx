@@ -27,7 +27,9 @@ export default function League() {
   async function fetchUpComingData() {
     try {
       const response = await fetch(
-        `https://apiv3.apifootball.com/?action=get_events&from=${currentYear}-${currentMonth}-${currentDay}&to=${currentYear}-${upComingMonth}-${currentDay}&league_id=${id}&APIkey=0490257b57bacc27910d998de4a5000247eb04b5f3a415f81cf53da0259b97d8`
+        `https://apiv3.apifootball.com/?action=get_events&from=${currentYear}-${currentMonth}-${currentDay}&to=${currentYear}-${upComingMonth}-${currentDay}&league_id=${id}&APIkey=${
+          import.meta.env.VITE_APIKEY
+        }`
       );
       if (!response.ok) {
         throw new Error("not ok");
@@ -42,7 +44,9 @@ export default function League() {
 
   async function fetchLeague() {
     const response = await fetch(
-      `https://apiv3.apifootball.com/?action=get_standings&league_id=${id}&APIkey=0490257b57bacc27910d998de4a5000247eb04b5f3a415f81cf53da0259b97d8`
+      `https://apiv3.apifootball.com/?action=get_standings&league_id=${id}&APIkey=${
+        import.meta.env.VITE_APIKEY
+      }`
     );
     if (!response.ok) {
       throw new Error("not ok");
