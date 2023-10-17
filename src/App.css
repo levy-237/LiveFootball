@@ -113,7 +113,7 @@ header div a {
 }
 
 .live {
-  margin-left: 7rem;
+  margin-right: 7rem;
   text-align: center;
 }
 .liveDisplay {
@@ -468,7 +468,7 @@ header div a {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
-  margin-left: 7rem;
+  margin-right: 7rem;
 }
 .newsPage h1 {
   text-align: center;
@@ -536,10 +536,10 @@ header div a {
 }
 @media screen and (max-width: 800px) {
   .live {
-    margin-left: 0rem;
+    margin-right: 0rem;
   }
   .honeHeader2 {
-    margin-left: 0;
+    margin-right: 0rem;
   }
 }
 @media screen and (max-width: 1420px) {

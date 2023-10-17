@@ -54,6 +54,10 @@ export default function Home() {
     <div className="home">
       <Sidebar />
       <div className="homeMatches">
+        <div>
+          <h1 className="honeHeader2">Live Games</h1>
+          <LiveMatch />
+        </div>
         <div className="homeDisplay">
           <h1 className="honeHeader">Previous Games</h1>
           {displayData &&
@@ -71,10 +75,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-        </div>
-        <div>
-          <h1 className="honeHeader2">Live Games</h1>
-          <LiveMatch />
         </div>
       </div>
     </div>
